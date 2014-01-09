@@ -87,8 +87,8 @@ plugin loaded for the connection, like so:
 
     PGOPTIONS="-c local_preload_libraries=my_plugin" psql
 
-The above method of changing parameters is possible for any application (for eg.
-[pgAdmin](http://pgadmin.org/) that uses `libpq` library to connect to Postrges, since the `PGOPTIONS`
+The above method of changing parameters is possible for any application that
+uses `libpq` library to connect to Postrges (for eg. [pgAdmin](http://pgadmin.org/)), since the `PGOPTIONS`
 environment variable is recognized and honored by `libpq`. Other applications/libraries
 may have their own methods to allow changing parameters during connection initiation.
 
@@ -118,8 +118,8 @@ there is no built-in way for one to see this order, and exploit that knowledge
 using queries.
 
 Say, if one wants to see a list of all parameters that cannot be
-changed by a normal user, there's no straight-forward way to do it. To that end,
-I use the following `enum` type and use it in queries to extract that information easily:
+changed by a normal user, there's no straightforward way to do it. To that end,
+I create the following `enum` type and use it in queries to extract that information easily:
 
     create type guc_context as enum (
         'internal',
