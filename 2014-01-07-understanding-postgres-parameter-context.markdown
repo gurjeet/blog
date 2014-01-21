@@ -33,12 +33,12 @@ output is also shown.
 
 The possible values of context are:
 
-- internal
-- postmaster
-- sighup
-- backend
-- superuser
-- user
+- internal (called `PGC_INTERNAL` in source code)
+- postmaster (`PGC_POSTMASTER`)
+- sighup (`PGC_SIGHUP`)
+- backend (`PGC_BACKEND`)
+- superuser (`PGC_SUSET`)
+- user (`PGC_USERSET`)
 
 The above list is in order of when a parameter can be set; if a parameter can be
 changed in a certain context, then it can be changed at any of the earlier
