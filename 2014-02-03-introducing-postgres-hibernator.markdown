@@ -1,17 +1,25 @@
 ---
 layout: post
 title: "Introducing Postgres Hibernator"
-date: 2014-02-03 21:28:46 -0500
+date: 2014-02-03 21:28:46 +0000
 comments: true
 categories: 
+- Postgres
 - DBA
 - Performance
 ---
+As it must have been obvious from my last [post][pg_rewarm_hibernation] that I
+wasn't really pleased by the amount of work needed to implement hibernation of
+Postgres shared-buffers, so I set out to implement a seamless Postgres hibernation
+solution.
+
+[pg_rewarm_hibernation]: http://gurjeet.singh.im/blog/2014/01/21/hibernating-and-restoring-postgres-buffer-cache/
+
 A couple of hours ago I [published][proposal] the [Postgres]/[EDB] extension I had been
 working on for last 10 days or so, in my spare time. Following are the contents of the
 README file from the [extension][Github].
 
-[Github]: del
+[Github]: https://github.com/gurjeet/pg_hibernate
 [Postgres]: http://www.postgresql.org
 [EDB]: http://www.enterprisedb.com
 
